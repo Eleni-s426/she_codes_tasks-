@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task1 </title>
+</head>
+<body>
+  <h1>Greeting </h1>
+  <button onclick="greetUser()">Click to Enter Name</button>
+
+  <p id="message"></p>
+
+  <script>
+    function greetUser() {
+    const name = prompt("Please enter your name:");
+      if (name) {
+        document.getElementById("message").textContent = "Hello, " + name + "! Welcome!";
+      } else {
+        document.getElementById("message").textContent = "Hello, Guest!";
+      }
+    }
+  </script>
+
+ <h1>Even or Odd Checker</h1>
+  <button onclick="checkevenodd()">Click to Enter Number</button>
+
+  <p id="number"></p>
+
+  <script> 
+function checkevenodd() {
+    const number = prompt("Please enter number:");
+      if (number % 2 === 0) {
+        document.getElementById("number").textContent = "even number " ;
+      } else {
+        document.getElementById("number").textContent = " odd number";
+      }
+    }
+
+</script>
+
+<h1>simple calculator </h1>
+  <button onclick="calculate()">Click to Enter Number</button>
+
+  <p id="result"></p>
+
+
+  <script> 
+function calculate() {
+    let num1 = prompt("Please enter the first number:");
+    num1 = parseFloat(num1);
+let num2 = prompt("Please enter the second number:");
+num2 = parseFloat(num2);
+   let op = prompt("Please enter the operator (+, -, *, /):");
+
+let result;
+     if (op == "+") {
+        result = num1 + num2;
+      } else if (op == "-") {
+        result = num1 - num2;
+      } else if (op == "*") {
+        result = num1 * num2;
+      } else if (op == "/") {
+        result = num1 / num2;
+      }
+
+      // Display result
+      document.getElementById("result").textContent ="Result: " + result;
+    }
+      
+    
+
+</script>
+</body>
+</html>
+ 
